@@ -1,0 +1,16 @@
+[2023-12-20T22:58:50.803+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bash_dag.sleep scheduled__2020-10-13T00:00:00+00:00 [queued]>
+[2023-12-20T22:58:53.846+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bash_dag.sleep scheduled__2020-10-13T00:00:00+00:00 [queued]>
+[2023-12-20T22:58:54.232+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2023-12-20T23:00:34.716+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): sleep> on 2020-10-13 00:00:00+00:00
+[2023-12-20T23:00:35.978+0000] {standard_task_runner.py:60} INFO - Started process 472 to run task
+[2023-12-20T23:00:38.080+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'bash_dag', 'sleep', 'scheduled__2020-10-13T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/util_dag_bash/bash_dag.py', '--cfg-path', '/tmp/tmpbiu9hoyd']
+[2023-12-20T23:00:39.665+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask sleep
+[2023-12-20T23:00:46.500+0000] {task_command.py:423} INFO - Running <TaskInstance: bash_dag.sleep scheduled__2020-10-13T00:00:00+00:00 [running]> on host c59568205018
+[2023-12-20T23:01:00.412+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='bash_dag' AIRFLOW_CTX_TASK_ID='sleep' AIRFLOW_CTX_EXECUTION_DATE='2020-10-13T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2020-10-13T00:00:00+00:00'
+[2023-12-20T23:01:00.997+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-12-20T23:01:01.157+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'sleep 5']
+[2023-12-20T23:01:03.915+0000] {subprocess.py:86} INFO - Output:
+[2023-12-20T23:01:09.805+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-12-20T23:01:17.056+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=bash_dag, task_id=sleep, execution_date=20201013T000000, start_date=20231220T225851, end_date=20231220T230116
+[2023-12-20T23:01:21.577+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2023-12-20T23:01:23.688+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check

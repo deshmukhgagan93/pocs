@@ -1,0 +1,15 @@
+[2023-12-20T23:03:59.788+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bash_dag.print_hello scheduled__2020-10-13T00:00:00+00:00 [queued]>
+[2023-12-20T23:04:03.838+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bash_dag.print_hello scheduled__2020-10-13T00:00:00+00:00 [queued]>
+[2023-12-20T23:04:05.794+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 4
+[2023-12-20T23:04:23.634+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): print_hello> on 2020-10-13 00:00:00+00:00
+[2023-12-20T23:04:26.904+0000] {standard_task_runner.py:60} INFO - Started process 555 to run task
+[2023-12-20T23:04:26.846+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'bash_dag', 'print_hello', 'scheduled__2020-10-13T00:00:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/util_dag_bash/bash_dag.py', '--cfg-path', '/tmp/tmpg94jmy4k']
+[2023-12-20T23:04:29.080+0000] {standard_task_runner.py:88} INFO - Job 33: Subtask print_hello
+[2023-12-20T23:04:45.576+0000] {cli_action_loggers.py:135} WARNING - Failed to log action (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2023-12-20T23:05:13.170+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 33 for task print_hello ((psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 555)
+[2023-12-20T23:05:24.293+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2023-12-20T23:05:46.856+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
